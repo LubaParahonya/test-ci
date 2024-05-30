@@ -1,17 +1,8 @@
-module.exports = {
-    
-    'extends': 'eslint:recommended',
-    'overrides': [
-      {
-        'files': ['**/*/*.test.js'],
-        'plugins': ['jest'],
-        'extends': ['plugin:jest/recommended'],
-        'rules': { 'jest/prefer-expect-assertions': 'off' }
-      }
-    ],
-    'parserOptions': {
-      'ecmaVersion': 'latest',
-      'sourceType': 'module'
-    },
-    'rules': {}
-  }
+import globals from "./globals";
+import pluginJs from "@eslint/js";
+
+
+export default [
+  {languageOptions: { globals: globals.browser }},
+  pluginJs.configs.recommended,
+];
