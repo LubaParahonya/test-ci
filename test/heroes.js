@@ -1,15 +1,10 @@
-const heroes = {name: 'Маг', health: 90};
-const  healthHero = heroes.health;
+export default function health(heroes) {
+  if (heroes.health > 50) {
+    return 'healthy';
+  }
+  if (heroes.health >= 15 && heroes.health <= 50) {
+    return 'wounded';
+  }
 
-export default function health(healthHero){
-if(healthHero > 50){
-    return "healthy";
-}
-if(healthHero >= 15 && healthHero <= 50){
-    return "wounded";
-}
-else{
-    return "critical";
-}
-
+  return 'critical';
 }
