@@ -21,6 +21,7 @@
     "jest": "^29.7.0"
   },
   "dependencies": {
+    "16": "^0.0.2",
     "core-js": "^3.37.1",
     "linefeeds": "^0.2.0",
     "save-dev": "^0.0.1-security"
